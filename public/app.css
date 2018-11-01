@@ -1,48 +1,56 @@
-
 body {
-  background-color: #bdc3c7;
+    background-color: #bdc3c7;
 }
 
-nav div > h4 {
-  margin: 0;
-  padding-top: .5em;
+nav div>h4 {
+    margin: 0;
+    padding-top: .5em;
 }
 
 #buscar {
-  margin: 2em 0;
+    margin: 2em 0;
 }
 
 .card-content {
-  padding: 20px !important;
+    padding: 20px !important;
 }
 
 .panel {
-  position: fixed;
+    position: fixed;
 }
 
 .invisible {
-  display: none;
+    display: none;
 }
 
 div.lista .card:hover {
-  opacity: 0.8;
-  cursor: pointer;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 div.lista {
-  max-height: 100%;
-  overflow: scroll;
+    max-height: 100%;
+    overflow: scroll;
 }
 
 .lista img {
-  max-width: 250px !important;
+    max-width: 250px !important;
 }
 
 #personalizada {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 
 .select-wrapper {
-  width: 50%;
-  margin: 0 auto !important;
+    width: 50%;
+    margin: 0 auto !important;
+}
+
+div.lista .card p {
+    display: inline;
+}
+
+div.lista .card b {
+    display: inline-block;
+    min-width: 10em;
 }

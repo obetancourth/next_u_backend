@@ -48,7 +48,7 @@ const dataFile = path.join(__dirname,"data.json"),
       //Agregando un precio comparable con numero extrayendo el simbolo $
       // y cambiando la coma por punto para convertirlo a un flotante
       data = data.map((bien, i)=>{
-        let _prcfloat = parseFloat(bien.Precio.substring(1).replace(",","."));
+        let _prcfloat = parseFloat(bien.Precio.substring(1).replace(",",""));
         let _bien = {...bien, "PrecioDecimal" : _prcfloat};
         return _bien;
       });
@@ -64,7 +64,7 @@ module.exports = {
       if(ciudad==="" && tipo==="" && precioIni === 0 && precioFin === 99999){
         return data;
       }
-      // Si algunos de los parametros cambio realizar el filtro para 
+      // Si algunos de los parametros cambio realizar el filtro para
       // devolver solo lo deseado.
       return data.filter((bien, i)=>{
         return ((bien.Ciudad == ciudad || ciudad == "")

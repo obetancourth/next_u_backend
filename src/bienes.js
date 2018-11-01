@@ -15,6 +15,10 @@ router.get('/tipo', (req, res, next) => {
     return res.status(200).json(obtenerTipos());
   }
 ); // end tipo
+router.get('/parametros', (req, res, next) => {
+    return res.status(200).json({tipos:obtenerTipos(), ciudades:obtenerCiudades()});
+  }
+); // end tipo
 
 router.post('/get', (req,res)=>{
     console.log(req.body);

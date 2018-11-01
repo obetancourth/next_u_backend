@@ -9,11 +9,12 @@ let app         = express(),
     bienes      = require('../src/bienes');
 
 
+console.log(__dirname);
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+app.use(express.static('public'));
 app.use('/bienes', bienes);
-
 app.all('*', (req, res)=>{
   res.status(400).send({"message":"Recurso No encontrado"});
 });
